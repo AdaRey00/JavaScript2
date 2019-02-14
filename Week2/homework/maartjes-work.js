@@ -73,16 +73,22 @@ console.log(`Maartje has earned €${roundedTotalProfit}`);
 
 ------------------------------------------Second Solution-------------------------------------------------------------------
 function computeEarnings(tasks, hourlyRate) {
-  // Replace this comment and the next line with your code
-  console.log(tasks, hourlyRate);
-}
+    let profits = [];
+    tasks.forEach(function(task) {
+      let duration = task.duration / 60;
+      if (duration >= 2) {
+        profits.push(duration * hourlyRate);
+      }
+    });
+    let totalProfits = profits.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    return totalProfits;
+  }
 
-// eslint-disable-next-line no-unused-vars
-const earnings = computeEarnings(maartjesTasks, maartjesHourlyRate);
+  // eslint-disable-next-line no-unused-vars
+  const earnings = computeEarnings(maartjesTasks, maartjesHourlyRate).toFixed(2);
 
-// add code to convert `earnings` to a string rounded to two decimals (euro cents)
-
-console.log(`Maartje has earned €${'replace this string with the earnings rounded to euro cents'}`);
+  // add code to convert `earnings` to a string rounded to two decimals (euro cents)
+  console.log(`Maartje has earned €${earnings}`);
 
 // Do not change or remove anything below this line
 module.exports = {
