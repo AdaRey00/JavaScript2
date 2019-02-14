@@ -56,7 +56,7 @@ let longTasks = tasksInHour.filter(task => {
 
 //Multiply the each duration by a per-hour rate for billing (use €20/hour) and sum it all up
 let profits = longTasks.map(task => {
-  return task * 25;
+  return task * 20;
 });
 
 let totalProfit = 0;
