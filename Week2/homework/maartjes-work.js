@@ -67,6 +67,9 @@ profits.forEach(function(profit) {
 //Output a formatted Euro amount, rounded to Euro cents, e.g: €11.34
 let roundedTotalProfit = totalProfit.toFixed(2);
 
+// add code to convert `earnings` to a string rounded to two decimals (euro cents)
+console.log(`Maartje has earned €${roundedTotalProfit}`);
+
 
 ------------------------------------------Second Solution-------------------------------------------------------------------
 function computeEarnings(tasks, hourlyRate) {
