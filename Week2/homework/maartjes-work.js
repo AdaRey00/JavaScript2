@@ -45,6 +45,32 @@ const tuesday = [
 const maartjesTasks = monday.concat(tuesday);
 const maartjesHourlyRate = 20;
 
+const maartjesTasks = monday.concat(tuesday);
+const maartjesHourlyRate = 20;
+-------------------------------------------First Solustion------------------------------------------------------------------
+//Map the tasks to durations in hours.
+let tasksInHour = maartjesTasks.map(tasks => tasks.duration / 60);
+
+//Filter out everything that took less than two hours
+let longTasks = tasksInHour.filter(task => {
+  return task >= 2;
+});
+
+//Multiply the each duration by a per-hour rate for billing (use €20/hour) and sum it all up
+let profits = longTasks.map(task => {
+  return task * 25;
+});
+
+let totalProfit = 0;
+profits.forEach(function(profit) {
+  totalProfit += profit;
+});
+
+//Output a formatted Euro amount, rounded to Euro cents, e.g: €11.34
+let roundedTotalProfit = totalProfit.toFixed(2);
+
+
+------------------------------------------Second Solution-------------------------------------------------------------------
 function computeEarnings(tasks, hourlyRate) {
   // Replace this comment and the next line with your code
   console.log(tasks, hourlyRate);
