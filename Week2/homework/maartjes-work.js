@@ -45,8 +45,6 @@ const tuesday = [
 const maartjesTasks = monday.concat(tuesday);
 const maartjesHourlyRate = 20;
 
-const maartjesTasks = monday.concat(tuesday);
-const maartjesHourlyRate = 20;
 -------------------------------------------First Solustion------------------------------------------------------------------
 //Map the tasks to durations in hours.
 let tasksInHour = maartjesTasks.map(tasks => tasks.duration / 60);
