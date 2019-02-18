@@ -3,7 +3,7 @@
 const values = ['a', 'b', 'c', 'd', 'a', 'e', 'f', 'c'];
 
 function makeUnique(arr) {
-var myUniqueArray = [];
+const myUniqueArray = [];
   arr.forEach(function(element) {
     if (myUniqueArray.indexOf(element) === -1) {
       myUniqueArray.push(element);
