@@ -1,9 +1,7 @@
 'use strict';
 
 function createBase(base) {
-  return function(base) {
     return base + 6;
-  };
 }
 
 const addSix = createBase(6);
