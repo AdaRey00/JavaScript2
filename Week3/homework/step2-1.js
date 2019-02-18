@@ -1,7 +1,7 @@
 'use strict';
 
 function foo(func) {
-  bar();
+  func();
 }
 
 function bar() {
